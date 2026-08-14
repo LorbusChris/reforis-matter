@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: reForis Matter 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-08-14 17:52+0200\n"
+"POT-Creation-Date: 2026-08-14 23:20+0200\n"
 "PO-Revision-Date: 2026-08-14 17:52+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: sv\n"
@@ -19,112 +19,211 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: js/src/app.js:8 js/src/matter/Matter.js:47 js/src/matter/Matter.js:61
-#: js/src/matter/Matter.js:74 js/src/matter/Matter.js:97
+#: ../js/src/app.js:8 ../js/src/matter/Matter.js:48
+#: ../js/src/matter/Matter.js:62 ../js/src/matter/Matter.js:75
+#: ../js/src/matter/Matter.js:98
 msgid "Matter"
 msgstr ""
 
-#: js/src/hooks.js:22
+#: ../js/src/hooks.js:22
 msgid "The request could not be carried out."
 msgstr ""
 
-#: js/src/matter/Matter.js:63
+#: ../js/src/matter/Matter.js:64
 msgid ""
 "No Matter network manager is installed on this router. Install the "
 "matter-netman package to expose this router on a Matter fabric."
 msgstr ""
 
-#: js/src/matter/Matter.js:76
+#: ../js/src/matter/Matter.js:77
 msgid ""
 "The Matter network manager is installed but is not answering, so no "
 "commissioning window can be opened. Check that its service is running."
 msgstr ""
 
-#: js/src/matter/Matter.js:82
+#: ../js/src/matter/Matter.js:83
 msgid "This router has been commissioned onto at least one fabric."
 msgstr ""
 
-#: js/src/matter/Matter.js:85
+#: ../js/src/matter/Matter.js:86
 msgid "This router has not been commissioned onto any fabric."
 msgstr ""
 
-#: js/src/matter/Matter.js:99
+#: ../js/src/matter/Matter.js:100
+msgid "Fabrics"
+msgstr ""
+
+#: ../js/src/matter/Matter.js:102
+msgid ""
+"Matter controllers that can manage this Thread border router and its "
+"shared Wi-Fi credentials."
+msgstr ""
+
+#: ../js/src/matter/Matter.js:108
+msgid "No controller has commissioned this router yet."
+msgstr ""
+
+#: ../js/src/matter/Matter.js:115
+msgid "Index"
+msgstr ""
+
+#: ../js/src/matter/Matter.js:116
+msgid "Label"
+msgstr ""
+
+#: ../js/src/matter/Matter.js:117
+msgid "Vendor ID"
+msgstr ""
+
+#: ../js/src/matter/Matter.js:118
+msgid "Actions"
+msgstr ""
+
+#: ../js/src/matter/Matter.js:138
+msgid "Unpair"
+msgstr ""
+
+#: ../js/src/matter/Matter.js:148
 msgid "Commissioning"
 msgstr ""
 
-#: js/src/matter/Matter.js:102
+#: ../js/src/matter/Matter.js:151
 msgid ""
 "A commissioning window is open. Pair this router with a controller using "
 "the code below."
 msgstr ""
 
-#: js/src/matter/Matter.js:105
+#: ../js/src/matter/Matter.js:154
 msgid ""
 "No commissioning window is open. The pairing code only works while one "
 "is, so it is not shown until you open one."
 msgstr ""
 
-#: js/src/matter/Matter.js:113
+#: ../js/src/matter/Matter.js:162
 msgid "Manual pairing code"
 msgstr ""
 
-#: js/src/matter/Matter.js:119
+#: ../js/src/matter/Matter.js:168
 msgid "QR payload"
 msgstr ""
 
-#: js/src/matter/Matter.js:145
+#: ../js/src/matter/Matter.js:194
 msgid "Close commissioning window"
 msgstr ""
 
-#: js/src/matter/Matter.js:152
+#: ../js/src/matter/Matter.js:201
 msgid "Open commissioning window"
 msgstr ""
 
-#: js/src/matter/Matter.js:157
-msgid "Fabrics"
+#: ../js/src/matter/MatterSettings.js:50
+msgid "Settings"
 msgstr ""
 
-#: js/src/matter/Matter.js:160
-msgid "This router manages the Thread network for its fabrics."
+#: ../js/src/matter/MatterSettings.js:52
+msgid "Share Wi-Fi credentials"
 msgstr ""
 
-#: js/src/matter/Matter.js:163
-msgid "This router does not manage a Thread network for its fabrics."
+#: ../js/src/matter/MatterSettings.js:55
+msgid ""
+"Let paired controllers read the access point credentials, so they can "
+"onboard Wi-Fi devices onto the same network."
 msgstr ""
 
-#: js/src/matter/Matter.js:169
-msgid "No controller has commissioned this router yet."
+#: ../js/src/matter/MatterSettings.js:60
+msgid "Wi-Fi network"
 msgstr ""
 
-#: js/src/matter/Matter.js:176
-msgid "Index"
+#: ../js/src/matter/MatterSettings.js:64
+msgid "The network whose access point credentials are shared; usually lan."
 msgstr ""
 
-#: js/src/matter/Matter.js:177
-msgid "Label"
+#: ../js/src/matter/MatterSettings.js:69
+msgid "Wi-Fi interface"
 msgstr ""
 
-#: js/src/matter/Matter.js:178
-msgid "Vendor ID"
+#: ../js/src/matter/MatterSettings.js:73
+msgid ""
+"Pin a specific wifi-iface section instead of the automatic choice. Leave "
+"empty for automatic."
 msgstr ""
 
-#: js/src/matter/Matter.js:179
-msgid "Actions"
+#: ../js/src/matter/MatterSettings.js:78
+msgid "Primary interface"
 msgstr ""
 
-#: js/src/matter/Matter.js:199
-msgid "Unpair"
+#: ../js/src/matter/MatterSettings.js:81
+msgid "The interface this device reports itself reachable on, usually br-lan."
 msgstr ""
 
-#: reforis_matter/__init__.py:55
+#: ../js/src/matter/MatterSettings.js:86
+msgid "Ethernet diagnostics"
+msgstr ""
+
+#: ../js/src/matter/MatterSettings.js:89
+msgid ""
+"Interface state and traffic counters are readable by every paired "
+"controller. Uncheck to report none of them."
+msgstr ""
+
+#: ../js/src/matter/MatterSettings.js:94
+msgid "Diagnostics interface"
+msgstr ""
+
+#: ../js/src/matter/MatterSettings.js:98
+msgid ""
+"Take the Ethernet diagnostics from this interface instead of the primary "
+"one, to report a port rather than a bridge. Leave empty for the primary."
+msgstr ""
+
+#: ../js/src/matter/MatterSettings.js:103
+msgid "Vendor name"
+msgstr ""
+
+#: ../js/src/matter/MatterSettings.js:106
+msgid ""
+"The manufacturer reported in Basic Information. Leave empty for the "
+"firmware's own."
+msgstr ""
+
+#: ../js/src/matter/MatterSettings.js:111
+msgid "Product name"
+msgstr ""
+
+#: ../js/src/matter/MatterSettings.js:114
+msgid ""
+"The product reported in Basic Information. Leave empty for the "
+"distribution name."
+msgstr ""
+
+#: ../js/src/matter/MatterSettings.js:124
+msgid "Save"
+msgstr ""
+
+#: ../js/src/matter/MatterSettings.js:127
+msgid ""
+"Saving restarts the Matter service; paired controllers reconnect on their"
+" own."
+msgstr ""
+
+#: ../reforis_matter/__init__.py:55
 msgid "Cannot open the commissioning window"
 msgstr ""
 
-#: reforis_matter/__init__.py:61
+#: ../reforis_matter/__init__.py:61
 msgid "Cannot close the commissioning window"
 msgstr ""
 
-#: reforis_matter/__init__.py:69
+#: ../reforis_matter/__init__.py:69
 msgid "Cannot remove the fabric"
 msgstr ""
+
+#: ../reforis_matter/__init__.py:90
+msgid "Cannot change the Matter settings"
+msgstr ""
+
+#~ msgid "This router manages the Thread network for its fabrics."
+#~ msgstr ""
+
+#~ msgid "This router does not manage a Thread network for its fabrics."
+#~ msgstr ""
 

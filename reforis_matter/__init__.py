@@ -10,10 +10,10 @@ its own.
 from http import HTTPStatus
 from pathlib import Path
 
-from flask import Blueprint, current_app, jsonify
+from flask import Blueprint, current_app, jsonify, request
 from flask_babel import gettext as _
 
-from reforis.foris_controller_api.utils import APIError
+from reforis.foris_controller_api.utils import APIError, validate_json
 
 BASE_DIR = Path(__file__).parent
 
@@ -68,3 +68,24 @@ def delete_fabric(index):
         _perform("matter", "remove_fabric", {"index": index}),
         _("Cannot remove the fabric"),
     )
+
+
+@blueprint.route("/settings", methods=["GET"])
+def get_settings():
+    """The matter-netman configuration"""
+    return jsonify(_perform("matter", "get_settings"))
+
+
+@blueprint.route("/settings", methods=["POST"])
+def post_settings():
+    """Update the matter-netman configuration.
+
+    The module restarts the daemon as part of the action, since the init
+    script bakes these options into its command line -- a 200 here means the
+    running daemon has the settings written, not merely that uci does.
+    """
+    validate_json(request.json, {"wifi_share": bool, "wifi_network": str})
+    response = _perform("matter", "update_settings", request.json)
+    if response.get("result") is not True:
+        raise APIError(_("Cannot change the Matter settings"), HTTPStatus.INTERNAL_SERVER_ERROR)
+    return jsonify(response)

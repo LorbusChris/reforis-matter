@@ -16,6 +16,7 @@ import {
 
 import API_URLs from "API";
 
+import MatterSettings from "./MatterSettings";
 import { useDeleteAction, usePostAction } from "../hooks";
 
 const POLL_INTERVAL = 5000;
@@ -96,6 +97,54 @@ export default function Matter() {
         <>
             <h1>{_("Matter")}</h1>
 
+            <h2>{_("Fabrics")}</h2>
+            <p>
+                {_(
+                    "Matter controllers that can manage this Thread border router and its shared Wi-Fi credentials."
+                )}
+            </p>
+            {(data.fabric_list || []).length === 0 ? (
+                <p className="text-muted">
+                    {_("No controller has commissioned this router yet.")}
+                </p>
+            ) : (
+                <div className="table-responsive">
+                    <table className="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>{_("Index")}</th>
+                                <th>{_("Label")}</th>
+                                <th>{_("Vendor ID")}</th>
+                                <th aria-label={_("Actions")} />
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {data.fabric_list.map((fabric) => (
+                                <tr key={fabric.Index}>
+                                    <td>{fabric.Index}</td>
+                                    <td>{fabric.Label || "—"}</td>
+                                    <td>{fabric.VendorId}</td>
+                                    <td className="text-end">
+                                        <Button
+                                            className="btn-sm btn-outline-danger"
+                                            onClick={() =>
+                                                removeFabric({
+                                                    suffix: String(
+                                                        fabric.Index
+                                                    ),
+                                                })
+                                            }
+                                        >
+                                            {_("Unpair")}
+                                        </Button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            )}
+
             <h2>{_("Commissioning")}</h2>
             <p>
                 {windowOpen
@@ -154,57 +203,7 @@ export default function Matter() {
                 )}
             </div>
 
-            <h2>{_("Fabrics")}</h2>
-            <p>
-                {data.thread_managed
-                    ? _(
-                          "This router manages the Thread network for its fabrics."
-                      )
-                    : _(
-                          "This router does not manage a Thread network for its fabrics."
-                      )}
-            </p>
-            {(data.fabric_list || []).length === 0 ? (
-                <p className="text-muted">
-                    {_("No controller has commissioned this router yet.")}
-                </p>
-            ) : (
-                <div className="table-responsive">
-                    <table className="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>{_("Index")}</th>
-                                <th>{_("Label")}</th>
-                                <th>{_("Vendor ID")}</th>
-                                <th aria-label={_("Actions")} />
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {data.fabric_list.map((fabric) => (
-                                <tr key={fabric.Index}>
-                                    <td>{fabric.Index}</td>
-                                    <td>{fabric.Label || "—"}</td>
-                                    <td>{fabric.VendorId}</td>
-                                    <td className="text-end">
-                                        <Button
-                                            className="btn-sm btn-outline-danger"
-                                            onClick={() =>
-                                                removeFabric({
-                                                    suffix: String(
-                                                        fabric.Index
-                                                    ),
-                                                })
-                                            }
-                                        >
-                                            {_("Unpair")}
-                                        </Button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-            )}
+            <MatterSettings />
         </>
     );
 }
