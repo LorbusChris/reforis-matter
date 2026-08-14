@@ -1,0 +1,17 @@
+stages:
+  - lint
+  - test
+  - build
+  - publish
+
+include:
+  - remote: "https://gitlab.nic.cz/turris/foris-controller/packages/-/raw/master/templates/python/base.yml"
+  - remote: "https://gitlab.nic.cz/turris/foris-controller/packages/-/raw/master/templates/make/reforis.yml"
+  - remote: "https://gitlab.nic.cz/turris/foris-controller/packages/-/raw/master/templates/python/build_and_publish.yml"
+
+
+build::python:
+  parallel:
+    matrix:
+      - IMAGE: ["registry.nic.cz/turris/foris-ci/reforis-ci"]
+

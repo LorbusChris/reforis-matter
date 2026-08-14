@@ -1,0 +1,130 @@
+# English translations for reForis Matter.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the reForis Matter
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: reForis Matter 0.1.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-08-14 17:52+0200\n"
+"PO-Revision-Date: 2026-08-14 17:52+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: js/src/app.js:8 js/src/matter/Matter.js:47 js/src/matter/Matter.js:61
+#: js/src/matter/Matter.js:74 js/src/matter/Matter.js:97
+msgid "Matter"
+msgstr ""
+
+#: js/src/hooks.js:22
+msgid "The request could not be carried out."
+msgstr ""
+
+#: js/src/matter/Matter.js:63
+msgid ""
+"No Matter network manager is installed on this router. Install the "
+"matter-netman package to expose this router on a Matter fabric."
+msgstr ""
+
+#: js/src/matter/Matter.js:76
+msgid ""
+"The Matter network manager is installed but is not answering, so no "
+"commissioning window can be opened. Check that its service is running."
+msgstr ""
+
+#: js/src/matter/Matter.js:82
+msgid "This router has been commissioned onto at least one fabric."
+msgstr ""
+
+#: js/src/matter/Matter.js:85
+msgid "This router has not been commissioned onto any fabric."
+msgstr ""
+
+#: js/src/matter/Matter.js:99
+msgid "Commissioning"
+msgstr ""
+
+#: js/src/matter/Matter.js:102
+msgid ""
+"A commissioning window is open. Pair this router with a controller using "
+"the code below."
+msgstr ""
+
+#: js/src/matter/Matter.js:105
+msgid ""
+"No commissioning window is open. The pairing code only works while one "
+"is, so it is not shown until you open one."
+msgstr ""
+
+#: js/src/matter/Matter.js:113
+msgid "Manual pairing code"
+msgstr ""
+
+#: js/src/matter/Matter.js:119
+msgid "QR payload"
+msgstr ""
+
+#: js/src/matter/Matter.js:145
+msgid "Close commissioning window"
+msgstr ""
+
+#: js/src/matter/Matter.js:152
+msgid "Open commissioning window"
+msgstr ""
+
+#: js/src/matter/Matter.js:157
+msgid "Fabrics"
+msgstr ""
+
+#: js/src/matter/Matter.js:160
+msgid "This router manages the Thread network for its fabrics."
+msgstr ""
+
+#: js/src/matter/Matter.js:163
+msgid "This router does not manage a Thread network for its fabrics."
+msgstr ""
+
+#: js/src/matter/Matter.js:169
+msgid "No controller has commissioned this router yet."
+msgstr ""
+
+#: js/src/matter/Matter.js:176
+msgid "Index"
+msgstr ""
+
+#: js/src/matter/Matter.js:177
+msgid "Label"
+msgstr ""
+
+#: js/src/matter/Matter.js:178
+msgid "Vendor ID"
+msgstr ""
+
+#: js/src/matter/Matter.js:179
+msgid "Actions"
+msgstr ""
+
+#: js/src/matter/Matter.js:199
+msgid "Unpair"
+msgstr ""
+
+#: reforis_matter/__init__.py:55
+msgid "Cannot open the commissioning window"
+msgstr ""
+
+#: reforis_matter/__init__.py:61
+msgid "Cannot close the commissioning window"
+msgstr ""
+
+#: reforis_matter/__init__.py:69
+msgid "Cannot remove the fabric"
+msgstr ""
+
