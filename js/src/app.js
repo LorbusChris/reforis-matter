@@ -10,7 +10,7 @@ const MatterPlugin = {
     submenuId: "matter",
     path: "/matter",
     component: Matter,
-    icon: "cube",
+    icon: "arrows-rotate",
 };
 
 ForisPlugins.push(MatterPlugin);

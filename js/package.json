@@ -6,7 +6,7 @@
         "url": "https://gitlab.nic.cz/turris/reforis/reforis-matter-plugin.git"
     },
     "license": "GPL-3.0",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "reForis Matter plugin allows managing Matter support on Turris routers.",
     "main": "./src/app.js",
     "eslintConfig": {
